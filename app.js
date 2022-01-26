@@ -150,3 +150,21 @@ whether or not the string contains a pair of matching brackets ({}, [], ()).
 These brackets must be nested appropriately in order to return a true value */
 
 
+function brackets(str){
+  if(str === "{}" || str === "[]" || str === "()"){
+      return true;
+  }
+  else{
+      return false;
+  }
+
+}
+str = "{hello world}";
+str = str.replace(/[a-z]/g,"");
+str = str.replace(/\s+/g, '');
+console.log(brackets(str));
+
+str = "{hello world]";
+str = str.replace(/[a-z]/g,"");
+str = str.replace(/\s+/g, '');
+console.log(brackets(str));
