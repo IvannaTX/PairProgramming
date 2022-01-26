@@ -118,15 +118,26 @@ Then create 3 methods in the object; A driveToWork method, driveAroundTheWorld m
 Each of these methods should affect the car’s mileage adding to it each time and console 
 logging the old mileage and the new mileage.*/
 
-let car = {
-  make: 'Toyota',
-  model: 'Camry',
-  year: "2021",
-  mileage: 237,
-  color: 'Black'
+class car {
+  constructor(make, model, year, mileage, color){
+  this.make ='Toyota';
+  this.model = 'Camry';
+  this.year = "2021";
+  this.mileage = 2000; //mileage in #s so we can do math with it!
+  this.color ='Black';
 }
-  //mileage in #s so we can do math with it!
-  driveToWork = function(mileage){
-    console.console.log(`Your mileage after driving to work is ${mileage}`);
+driveToWork = function(){
+  console.log(`Your mileage after driving to work is ${this.mileage + 33}`);
   }
-  
+  aroundTheWorld = function(){
+    console.log(`Your mileage after driving around thw world is ${this.mileage + 24000}`)
+  }
+  runErrands = function(){
+    console.log(`Your mileage after running errands is ${this.mileage + 30}`)
+  }
+}
+
+const drive1 = new car ('Work')
+drive1.driveToWork();
+drive1.aroundTheWorld();
+drive1.runErrands();
