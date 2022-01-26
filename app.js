@@ -99,11 +99,9 @@ console.log(anagramCheck(string1, string2));
 /*MEDIUM (3) Write a function that takes in two numbers and determines the largest positive integer 
 that divides the two numbers without a remainder. */
 
-function gcd_two_numbers(x, y) {
+function gdc_two_numbers(x, y) {
   if ((typeof x !== 'number') || (typeof y !== 'number')) 
     return false;
-  x = Math.abs(x);
-  y = Math.abs(y);
   while(y) {
     var t = y;
     y = x % y;
@@ -111,8 +109,8 @@ function gcd_two_numbers(x, y) {
   }
   return x;
 }
-console.log(gcd_two_numbers(12, 13));
-console.log(gcd_two_numbers(9, 3));
+console.log(gdc_two_numbers(336,360));
+console.log(gdc_two_numbers(78,126));
 
 
 /*Medium (4) Create a car object with the items: Make, Model, Year, Milage, and Color. 
