@@ -118,32 +118,35 @@ Then create 3 methods in the object; A driveToWork method, driveAroundTheWorld m
 Each of these methods should affect the car’s mileage adding to it each time and console 
 logging the old mileage and the new mileage.*/
 
-class car {
-  constructor(make, model, year, mileage, color){
-  this.make ='Toyota';
-  this.model = 'Camry';
-  this.year = "2021";
-  this.mileage = 2000; //mileage in #s so we can do math with it!
-  this.color ='Black';
-}
-driveToWork = function(){
-  console.log(`Your mileage after driving to work is ${this.mileage + 33}`);
-  }
-  aroundTheWorld = function(){
-    console.log(`Your mileage after driving around thw world is ${this.mileage + 24000}`)
-  }
-  runErrands = function(){
-    console.log(`Your mileage after running errands is ${this.mileage + 30}`)
-  }
+let Car = {
+  make: "Honda",
+  model: "Accord",
+  year: 2020,
+  mileage: 10000,
+  color: "red",
+
+  driveToWork: () => {
+      Car.mileage += 33;
+      console.log(`You new mileage aftr driivng to work is: ${Car.mileage}.`)
+  },
+  driveAroundTheWorld: () => {
+      Car.mileage += 24000;
+      console.log(`You new mileage after driving around the world is: ${Car.mileage}.`)
+  },
+  runErrands: () => {
+      Car.mileage += 30;
+      console.log(`Your new mileage after running errands is: ${Car.mileage}.`)
+  },
 }
 
-const drive1 = new car ('Work')
-drive1.driveToWork();
-drive1.aroundTheWorld();
-drive1.runErrands();
+Car.driveToWork();
+Car.driveAroundTheWorld();
+Car.runErrands();
 
 
 
 /*Hard (1) Write a function that takes in a string and returns a boolean value 
 whether or not the string contains a pair of matching brackets ({}, [], ()). 
 These brackets must be nested appropriately in order to return a true value */
+
+
