@@ -141,3 +141,9 @@ const drive1 = new car ('Work')
 drive1.driveToWork();
 drive1.aroundTheWorld();
 drive1.runErrands();
+
+
+
+/*Hard (1) Write a function that takes in a string and returns a boolean value 
+whether or not the string contains a pair of matching brackets ({}, [], ()). 
+These brackets must be nested appropriately in order to return a true value */
